@@ -20,9 +20,8 @@ contract FundFundMe is Script {
 
     function run() external {
         address mostRecentDeployed = DevOpsTools.get_most_recent_deployment("FundMe", block.chainid);
-        vm.startBroadcast();
+
         fundFundMe(mostRecentDeployed);
-        vm.stopBroadcast();
     }
 }
 
